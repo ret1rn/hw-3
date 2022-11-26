@@ -4,9 +4,9 @@ let account = 7777
 
 let nameIs = prompt("Как вас зовут?").trim()
 
-nameIs = nameIs[0].toUpperCase() + nameIs.slice(1)
+nameIs = nameIs[0].toUpperCase() + nameIs.slice(1).toLowerCase()
 
-if (nameIs === name || name === "alex") {
+if (nameIs === name) {
     let password = +prompt("Номер счета?").trim()
     if (account === password) {
         let cashOut = +prompt("Сколько обналичить?").trim()
