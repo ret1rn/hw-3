@@ -1,33 +1,77 @@
-let yourName = prompt("What's your name?").toLowerCase().trim()
-let gethere = [1, 2]    
+// let arr = [
+//     {
+//         company: 'artel',
+//         budget: 1000,
+//         expenses: 500,
+//         tax: 13
+//     },
+//     {
+//         company: 'uztelecom',
+//         budget: 4000,
+//         expenses: 1700,
+//         tax: 13
+//     },
+//     {
+//         company: 'uzmotors',
+//         budget: 8000,
+//         expenses: 3500,
+//         tax: 13
+//     },
+//     {
+//         company: 'chopar',
+//         budget: 5000,
+//         expenses: 4000,
+//         tax: 13
+//     },
+// ]
 
-if(yourName[0] === "a") {
-    let yourAge = +prompt("How old are you?").trim()
-    if (yourAge >= 20 && yourAge <= 40) {
-        let money = +prompt("How much money do you have?").trim()
-        if (money >= 100) {
-            let manyPeople = +prompt("How many people want to come in?").trim()
-            if (gethere.length + manyPeople >= 10) {
-                alert("Welcome to the club!")
-                let arr = []
+arr.filter(item => {
+    // item.expenses += item.budget / 100 * item.tax
+    // item.percent = item.expenses / (item.budget / 100)
+})
 
-                arr[0] = yourName
-                arr[1] = yourAge + " age"
-                arr[2] = money + "$"
-                arr[3] = manyPeople + " people"
+let arr = [
+    {
+        company: 'artel',
+        budget: 1000,
+        expenses: 500
+    },
+    {
+        company: 'uztelecom',
+        budget: 4000,
+        expenses: 1700
+    },
+    {
+        company: 'uzmotors',
+        budget: 8000,
+        expenses: 3500
+    },
+    {
+        company: 'chopar',
+        budget: 5000,
+        expenses: 4000
+    },
+]
 
-                console.log(arr);
-            } else {
-                alert("Too many people")
-            }
-        } else {
-            alert("Bomj")
-        }
-    } else if (yourAge < 20) {
-        alert("Molokosos")
-    } else {
-        alert("Too old")
-    }
-} else {
-    alert("Sorry, this place is not for you!")
-}
+let middleExpenses = 0
+
+arr.filter(item => {
+    // middleExpenses = ((0 + item.expenses) / ((0 + item.budget) / 100)) / arr.length
+    middleExpenses += item.expenses / arr.length
+    totalExpenses += item.expenses
+})
+
+let morePays = arr.reduce((a, b) => {
+    if (a.percent > b.percent) return a
+    else return b
+})
+
+let lessPays = arr.reduce((a, b) => {
+    if (a.percent < b.percent) return a
+    else return b
+})
+
+console.log(middleExpenses);
+console.log(morePays);
+console.log(lessPays);
+console.log(totalExpenses);
