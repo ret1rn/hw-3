@@ -31,7 +31,7 @@ let totalExpenses = 0
 arr.filter(item => {
     item.expenses += item.budget / 100 * item.tax
     item.percent = item.expenses / (item.budget / 100)
-    // middleExpenses = ((0 + item.expenses) / ((0 + item.budget) / 100)) / arr.length
+    // middleExpenses = (item.expenses / (item.budget / 100)) / arr.length
     middleExpenses += item.expenses / arr.length
     totalExpenses += item.expenses
 })
