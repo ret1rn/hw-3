@@ -25,10 +25,10 @@
 //     },
 // ]
 
-arr.filter(item => {
-    // item.expenses += item.budget / 100 * item.tax
-    // item.percent = item.expenses / (item.budget / 100)
-})
+// arr.filter(item => {
+//     item.expenses += item.budget / 100 * item.tax
+//     item.percent = item.expenses / (item.budget / 100)
+// })
 
 let arr = [
     {
